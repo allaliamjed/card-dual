@@ -1,0 +1,143 @@
+{
+  "project_name": "Card Dual Studio",
+  "archetype": "High Density Studio IDE / Dev Tool (Figma / Linear / Vercel Aesthetic)",
+  "theme_mode": "dark",
+  "typography": {
+    "font_family_display": "JetBrains Mono, SF Mono, Menlo, monospace",
+    "font_family_sans": "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+    "font_family_mono": "JetBrains Mono, Fira Code, monospace",
+    "sizes": {
+      "app_header": "text-base font-semibold tracking-tight",
+      "section_heading": "text-lg font-medium tracking-tight text-slate-100",
+      "card_title": "text-sm font-semibold tracking-tight text-slate-100",
+      "body_text": "text-xs font-normal text-slate-300 leading-relaxed",
+      "caption_mono": "text-[11px] font-mono tracking-tight text-slate-400",
+      "badge_text": "text-[10px] font-mono font-medium tracking-wide uppercase",
+      "stat_value": "text-xl font-mono font-bold tracking-tight text-slate-50"
+    }
+  },
+  "colors": {
+    "canvas_bg": "#090a0f",
+    "panel_bg": "#11131a",
+    "panel_bg_secondary": "#161922",
+    "panel_bg_hover": "#1c202c",
+    "border_subtle": "#1e2230",
+    "border_medium": "#2a3044",
+    "border_highlight": "#3b435e",
+    "accent_primary": "#8b5cf6",
+    "accent_primary_glow": "rgba(139, 92, 246, 0.15)",
+    "accent_cyan": "#06b6d4",
+    "accent_cyan_glow": "rgba(6, 182, 212, 0.15)",
+    "text_primary": "#f8fafc",
+    "text_secondary": "#94a3b8",
+    "text_muted": "#64748b",
+    "semantic": {
+      "green_valid": "#10b981",
+      "green_bg": "rgba(16, 185, 129, 0.12)",
+      "amber_warning": "#f59e0b",
+      "amber_bg": "rgba(245, 158, 11, 0.12)",
+      "red_invalid": "#ef4444",
+      "red_bg": "rgba(239, 68, 68, 0.12)",
+      "violet_active": "#8b5cf6",
+      "cyan_simulating": "#06b6d4"
+    }
+  },
+  "visual_enhancers": {
+    "border_radius": "rounded-md (4px to 6px max for professional IDE feel)",
+    "shadows": "shadow-sm for panels, shadow-xl for floating inspector & modals, no harsh glowing neon",
+    "glassmorphism": "backdrop-blur-md bg-[#11131a]/90 border border-[#1e2230] for headers, overlays and Cmd+K palette",
+    "micro_textures": "subtle grid lines on simulation charts, crisp 1px hairlines, monochrome status dot indicators",
+    "card_preview_rendering": "restrained digital card frame with crystal-clear stat badges, rarity band, mana cost gem, and effect syntax highlighter"
+  },
+  "layout_and_grids": {
+    "shell_structure": "Persistent Desktop IDE Shell (1440px+ optimized)",
+    "sidebar_width": "w-64 fixed left navigation panel with studio brand, workspace selector, version badge, and section list",
+    "context_bar_height": "h-12 sticky top bar with active section title, breadcrumb, global search button (Cmd+K), version switcher, quick export trigger, and autosave indicator",
+    "main_workspace": "flex-1 overflow-y-auto p-6 bg-[#090a0f]",
+    "card_library_grid": "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4",
+    "card_inspector": "w-[440px] fixed right-0 top-0 bottom-0 z-40 bg-[#11131a] border-l border-[#1e2230] shadow-2xl overflow-y-auto p-6",
+    "simulation_dashboard": "grid grid-cols-12 gap-6 with left 4-col config panel, center 5-col chart stats, right 3-col matchup matrix",
+    "balance_dashboard": "grid grid-cols-12 gap-6 with top KPI cards, 8-col anomaly table, 4-col side-by-side version comparison panel"
+  },
+  "motion": {
+    "transitions": "transition-all duration-200 ease-in-out",
+    "slide_over": "framer-motion initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ duration: 0.2 }}",
+    "command_palette": "framer-motion fade & scale-in (150ms)",
+    "progress_bar": "smooth animated progress fill during simulation runs (300ms step updates)",
+    "interactive_hover": "hover:bg-[#1c202c] hover:border-[#3b435e] cursor-pointer"
+  },
+  "component_path": {
+    "app": "src/App.js",
+    "shell": "src/components/layout/AppShell.js",
+    "sidebar": "src/components/layout/Sidebar.js",
+    "context_bar": "src/components/layout/ContextBar.js",
+    "command_palette": "src/components/modals/CommandPalette.js",
+    "godot_export_modal": "src/components/modals/GodotExportModal.js",
+    "card_library": "src/components/library/CardLibrary.js",
+    "card_grid_item": "src/components/library/CardGridItem.js",
+    "card_inspector": "src/components/editor/CardInspector.js",
+    "card_live_preview": "src/components/editor/CardLivePreview.js",
+    "card_editor": "src/components/editor/CardEditorWorkspace.js",
+    "simulation_center": "src/components/simulation/SimulationCenter.js",
+    "simulation_charts": "src/components/simulation/SimulationCharts.js",
+    "matchup_matrix": "src/components/simulation/MatchupMatrix.js",
+    "balance_dashboard": "src/components/balance/BalanceDashboard.js",
+    "version_compare": "src/components/balance/VersionCompare.js",
+    "execution_log": "src/components/log/ExecutionLogConsole.js"
+  },
+  "image_urls": {
+    "card_artworks": [
+      {
+        "id": "art-1",
+        "url": "https://images.unsplash.com/photo-1772710954659-da3e420038af?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxkYXJrJTIwZmFudGFzeSUyMGNhcmQlMjBnYW1lJTIwYXJ0JTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc4Nzc4MTQ0NXww&ixlib=rb-4.1.0&q=85",
+        "title": "Devil Tarot / Shadow Monarch",
+        "archetype": "Shadow"
+      },
+      {
+        "id": "art-2",
+        "url": "https://images.unsplash.com/photo-1586717052255-4c625ad5a6ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxkYXJrJTIwZmFudGFzeSUyMGNhcmQlMjBnYW1lJTIwYXJ0JTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc4Nzc4MTQ0NXww&ixlib=rb-4.1.0&q=85",
+        "title": "Ember Sorcerer",
+        "archetype": "Flame"
+      },
+      {
+        "id": "art-3",
+        "url": "https://images.unsplash.com/photo-1750096319146-6310519b5af2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2NjV8MHwxfHNlYXJjaHw0fHxjeWJlcnB1bmslMjBjaGFyYWN0ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODc3Mjg4MzB8MA&ixlib=rb-4.1.0&q=85",
+        "title": "Neural Weaver",
+        "archetype": "Cyber"
+      },
+      {
+        "id": "art-4",
+        "url": "https://images.pexels.com/photos/20434858/pexels-photo-20434858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "title": "Vanguard Sentinel",
+        "archetype": "Tech"
+      },
+      {
+        "id": "art-5",
+        "url": "https://images.unsplash.com/photo-1644007824843-37e9069834bd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZmFudGFzeSUyMGNhcmQlMjBnYW1lJTIwYXJ0JTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc4Nzc4MTQ0NXww&ixlib=rb-4.1.0&q=85",
+        "title": "Ancient Grimoire",
+        "archetype": "Arcane"
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast_ratio": "Minimum 4.5:1 for body and data text, high contrast mono metrics",
+    "keyboard_navigation": "Full keyboard access: Cmd+K for command palette, Esc to close slide-over / modals, arrow keys for card navigation",
+    "aria_attributes": "aria-expanded on collapse panels, role='dialog' on CommandPalette and GodotExportModal, data-testid on every interactive element"
+  },
+  "instructions_to_main_agent": {
+    "app_shell": "Build a cohesive, fixed desktop IDE layout with left sidebar, top context bar, persistent bottom console status bar, and floating action button for Godot Export.",
+    "data_mocking": "Provide a rich set of 25+ default Card Dual cards across 4 factions (Shadow, Ember, Tech, Arcane), 5 rarities (Common, Rare, Epic, Legendary, Mythic), full effect scripts, status states, power scores, and simulated win rates.",
+    "command_palette": "Implement Cmd+K command palette trigger globally so user can jump between cards, tools, run simulations, and trigger GDScript export.",
+    "godot_exporter": "Provide full Godot 4 GDScript generation with syntax highlight, copy to clipboard, and code download options for GDScript card data structure.",
+    "balance_engine": "Include simulated statistical balance checks, anomaly detection (cards with >58% win rate highlighted amber/red), confidence interval calculations, and version comparison."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic outputs. In frontend design, create distinct, professional IDE frontends.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as loud full-screen gradients.",
+    "Create depth through layered panels with 1px border hierarchy (#1e2230 and #2a3044).",
+    "Never center-align the app container. Maintain left-aligned, structured studio layout.",
+    "DO NOT use transparent background in overlays, dropdowns, headers, or floating inspectors.",
+    "All key interactive elements MUST include data-testid attributes in kebab-case (e.g. data-testid='card-search-input', data-testid='run-sim-btn', data-testid='export-godot-btn').",
+    "Use sonner for toast notifications on autosave, card creation, simulation completion, and GDScript code copying."
+  ]
+}
